@@ -1,0 +1,38 @@
+O codigo me apresenta os seguintes novos comandos:
+- #include <stdint.h>
+- struct
+- uint8_t
+- uint16_t
+- "struct SensorIndustrial s1 = {101, 25.5, 1}"
+- %u , s1.id
+- %.2f , s1.temperatura
+- %s , s1.status
+- Os operadores ? e :
+- sizeof(s1)
+
+A linha de comando #include <stdint.h> faz a inclusao de funcoes para determinar o tamanho do dado de uma variavel em bytes.
+
+As funcoes incluidas sao uint8_t, uint16_t, uint32_t, uint64_t e assim vai duplicando. Essas funcoes sao bem uteis para deixar o programa bem eficiente em questao de alocacao de espaco na memoria.
+
+
+O struct, pelo que eu entendi, cria um banco de informacoes de listas (arrays). E possivel criar diversas arrays e elaborar as variaveis dentro dessa array.
+
+
+As formatacoes do printf na linguagem C. Com o mesmo modelo do python, %u e utilizado para valores sem sinais (unsigned), %.2f para pontos flutuantes com ate 2 numeros decimais, %s para texto e %zu especifico para o size_t.
+
+size_t e o resultado da funcao sizeof(), esta que nao resulta num int comum.
+o modificador para o size_t e o "z", o "u" foi utilizado para indicar que o valor tambem e um valor sem sinal (unsigned). Portanto, o especificador utilizado no exercicio foi %zu para o sizeof(s1), em que diz para o printf que esta usando um valor do sizeof e que ele nao tem valor.
+
+Apos usar os pontos de formatacao, usa-se o separador "," apos a string do printf e logo em seguida seleciona a variavel em que vai tomar conta do ponto de formatacao posicionado.
+
+
+Os operacionais "?" e ":" sao if-else compacto, praticamente.
+Utiliza-se ? para caso a condicao for verdadeira, e : para caso a condicao for falsa.
+Como no exercicio estavamos usando uma variavel de status, que possui 1byte de valor, que para o valor de 1, retorna verdadeiro, e o valor 0 retorna falso. Usamos os operadores nele para retornar texto de Operacional ou Erro:
+
+printf("Status: %s\n", s1.status ? "Operacional" : "Erro");
+
+Aqui vemos que esta dizendo literalmente que se s1.status verdadeiro, retorne "Operacional". Se nao, retorne "Erro".
+
+
+A funcao de sizeof(), acredito que ja se define pelo nome, retorna o tamanho em bytes de uma variavel ou bloco de memoria. No exercicio, foi utilizado o sizeof na array s1 do struct SensorIndustrial: sizeof(s1). Com as variaveis do SensorIndustrial limitadas com o uso dos comandos do stdint.h, foi possivel obter o tamanho de todas elas usando a funcao sizeof() em toda a array s1.
