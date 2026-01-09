@@ -3,7 +3,7 @@
 #include <math.h>
 #include <unistd.h>
 
-typedef struct{
+typedef struct{			// o typedef é utilizado para definir uma struct noemada "Telemetria" para que o nome seja um atalho para um tipo de dado.
 	uint8_t id;
 	float temp;
 	uint32_t time;
@@ -12,7 +12,7 @@ typedef struct{
 } Telemetria;
 
 int main(){
-	Telemetria p1;
+	Telemetria p1;		// aqui o nome da struct se comporta como uma declaração a uma variável, tipo um int. Deixa o código mais limpo.
 	p1.id = 23;
 	p1.temp = 23.3;
 	p1.time = 0;
