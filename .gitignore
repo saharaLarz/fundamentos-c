@@ -1,0 +1,14 @@
+# Compilação (Executáveis e Objetos)
+*.o
+*.out
+*.exe
+
+# Executáveis do Linux (Geralmente não têm extensão)
+# Se você costuma dar nomes específicos, adicione-os aqui:
+meu_programa
+teste
+
+# Pastas de Build e Debug
+build/
+.vscode/
+.gdb_history
