@@ -1,5 +1,6 @@
 #include <stdio.h>	// Para printar no output
 #include <stdint.h>	// Para tipos de tamanho fixo (uint8_t, uint16_t, uint32_t)
+#include <stdlib.h>
 
 struct SensorIndustrial{
 	uint16_t id;		// ID do sensor (2bytes)
