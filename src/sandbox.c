@@ -52,6 +52,24 @@ void variaveis(){
     }
 }
 
+void structs(){
+// Structs são blocos em que pode-se armazenar diversas variáveis
+
+
+	struct Cadastro{
+		char nome;
+		int idade;
+		float altura;
+		bool is_male;
+	};
+	
+	struct Cadastro a1 = {"Pedro", 24, 1.65, true};
+
+	a1.nome = "Pedro Henrique";
+
+
+}
+
 void pointers(){
     
 }
