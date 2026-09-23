@@ -1,5 +1,7 @@
 
 /* Protege o arquivo contra leitura dupla */
+/* Se utiliza RELAY_H e não RELAY.H, pois o . é um operador para structs */
+
 #ifndef RELAY_H // Se Relay_h não está definido...
 #define RELAY_H // ...Definir agora o Relay_h.
 
